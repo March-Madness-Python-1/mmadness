@@ -1,1 +1,26 @@
+# [ ] code and test SHIRT SALE
+def anothershirt():
+    question = input('Would you like another shirt price? (Yes/No) ').lower()
+    if question == 'yes':
+        shirtsale()
+    elif question == 'no':
+        print('Have a nice day ☺')
+    else:
+        print('We cannot comprehend your brain capacity')
+        anothershirt()
+def shirtsale():
+    size = input("Enter size (S, M, L): ") 
+    if size.upper() == "S":
+        print("Small T-Shirts are $6")
+        anothershirt()
+    elif size.upper() == "M":
+        print("Medium  T-Shirts are $7")
+        anothershirt()
+    elif size.upper() == "L":
+        print("Large T-Shirts are $8")
+        anothershirt()
+    else:
+        print("Sorry, we don't have", size, "as a size.")
+        shirtsale()
+shirtsale()
 
